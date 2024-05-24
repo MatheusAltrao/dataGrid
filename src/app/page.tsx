@@ -77,7 +77,7 @@ export default function Home({ searchParams }: { searchParams: Record<string, st
         </TableHeader>
         <TableBody>
           {records.slice(first, first + rows).map((users, index) => (
-            <TableRow>
+            <TableRow key={users.id}>
               <TableCell className="font-medium truncate max-w-[150px]">{users.id}</TableCell>
               <TableCell>{users.name}</TableCell>
               <TableCell>{users.email}</TableCell>
